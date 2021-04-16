@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MNX Studio</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ec460f632.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+    <!-- na body dajemy scrol-spy i dlatego w css  w body musimy dać position: relative; scrol-spy jest wBootstrapie w components, i dajemy w body ten kod:  data-spy="scroll" data-target="#navbar-example, skopiowany z Bootstrapa, a nastepnie atrybut #navbar-example  musimy dodać do naszej nawigacji jako id='navbar-example' 
+    
+    -->
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-light bg-light py-4 fixed-top">
+        <!-- py -pading na osi Y daje nam możliwośc podrośnięcia navigacji  a fixed-top przyklaja ją do góry i nie znika ona przy skrolowaniu, całą navigacjaą z Bootstrapa wkljemy w div navbar-example, gdzie połączymy ją ze spyem   -->
+        <a class="navbar-brand px-4" href="#"><i class="fas fa-camera-retro orange-color"></i> MNX Studio</a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            <!-- powyżej oryginalny span z bootstrapa zamieniony tagiem i z własną ikoną hamburgera i klasą border-0 usunięta obwiednia hamburgera-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <!-- dzięki ml-auto tj. margin left mamy automatycznie po lewej stronie obliczany margines co nam przenosi ikony przyciskó navigacjii na prawa stronę !!!!!!! dajemy to oczywiście na rodzicu tych przycisków -->
+                <a class="nav-item nav-link active" href="#home">Home</a>
+                <a class="nav-item nav-link" href="#aboutus">O nas</a>
+                <a class="nav-item nav-link" href="#team">Zespół</a>
+                <a class="nav-item nav-link" href="#contact">Kontakt</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-shadow"></div>
+        <div
+            class="container h-100 d-flex flex-column justify-content-center align-items-center text-light text-center">
+            <!-- w/w jest ustawiona wysokość na 100 % flex na columny i dzięki justify content - center i align items -center => wycentrowana zawartość kontenera,  czcionka nie biała  ale biaława to text light, a text - center środkuje nam sama tresć -->
+            <p class="display-1">MNX Studio</p>
+            <p class="header-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#aboutus" class="btn btn-outline-light">poznaj nas</a>
+            <!-- powyżej zamiast korzystać z gotowego przycisku w Bootstrapie w sekcji buttons, robimy lącz "a" i łaczymy z id #aboutus a w tym łączu wklejamy z Bootstrapa dwie klasy z w/w oryginalnego przycisku które zrobią nam z w/w łącza też ostylowany przycisk tj.btn btn-outline-light   -->
+        </div>
+    </header>
+
+    <main>
+        <section id="aboutus" class="scroll-fix">
+            <div class="container py-5 about-boxes">
+                <!-- pading na osi Y aby odsunąc text od zdjecia w headzie oraz dodanie naszej klasy about-boxes z cssa. Poniżej dajemy row z textem center aby jego dzieci były wyśrodkowane i ułożyły sie od lewej do prawej   -->
+                <div class="row text-center">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <!-- na malym wymiarze chcemy aby ten element zabieral 12 kolumn, na md 6 kolumn a lg 3 kolumny  -->
+                        <div class="about-box m-3 p-4 p-lg-5 border">
+                            <!-- powyżej jak div przechodzi na wymiar lg to osiąga pading 5  a w mniejszych rozmarach ma 4, no i border - jest dodana obwódka => to jest opakowanie na kartę  jedną z czterech  -->
+                            <h3 class="text-dark">Jakość</h3>
+                            <p class="about-icon text-dark"><i class="fas fa-check"></i></p>
+                            <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, est?</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="about-box m-3 p-4 p-lg-5 border bg-dark text-light">
+                            <h3>Klienci</h3>
+                            <p class="about-icon"><i class="fas fa-user-friends"></i></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, est?</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="about-box m-3 p-4 p-lg-5 border">
+                            <h3 class="text-dark">Sprzęt</h3>
+                            <p class="about-icon text-dark"><i class="fas fa-server"></i></p>
+                            <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, est?</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="about-box m-3 p-4 p-lg-5 border bg-dark text-light">
+                            <h3>Ceny</h3>
+                            <p class="about-icon"><i class="fas fa-dollar-sign"></i></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, est?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container about-info py-5 text-center">
+                <div class="row">
+                    <!-- dlatego ze w kontenerze daliśmy py-5 to odsuwa text od góry i od dołu aby nie był zbyt blisku wyzej położonych kafalek, a text-centert z poniższą  klasą col wyśrodkowuje zarówno tekst jaki  ewentualne elementy  -->
+                    <div class="col">
+                        <p class="display-3 orange-color">Czym się wyróżniamy?</p>
+                        <!-- display-3 dla p daje wielkość napisu  1 bardzo duzy a 5 bardzo mały, w-50  to odaje to ze hrka zajmuje 50% szerokości rodzica  a mx-auto to jets margin na osi X - auto wyśrodkowuje ją,  -->
+                        <hr class="w-75 mx-auto mt-4 mb-5">
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <!-- w klasie btn dodaliśmy klasę text dark i klasę text decoration none z wiadomych powodów  -->
+                                        <button class="btn btn-link text-dark text-decoration-none" type="button"
+                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Najlepsza jakość produktów
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur
+                                        numquam quam ea illo et minima nesciunt voluptas accusamus nemo. Eligendi optio
+                                        possimus architecto eius iste accusantium alias temporibus voluptatibus!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed text-dark text-decoration-none"
+                                            type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Świetne relacje z klientami
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, explicabo rerum
+                                        vero, accusamus dolores officiis sequi ut expedita ipsum voluptatem commodi
+                                        molestiae laudantium facere nihil nostrum. Molestiae dolor a aperiam!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed text-dark text-decoration-none"
+                                            type="button" data-toggle="collapse" data-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Zdobywcy wielu prestiżowych nagród
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt consectetur
+                                        omnis aperiam magnam, quaerat dicta tempore, dolore quibusdam aspernatur illo
+                                        voluptates facere vel expedita dolores iure commodi dolorem ipsam nam.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="scroll-fix">
+            <div class="container text-center">
+                <!-- oczywiście kontener z klasą text-center aby wszystkie dzieci jego miały wycentrowany text, poniżej użycie naszego koloru pomara,ńczowego oraz hrki wyśrodkowanej z marginesami  p jest użyte z klasą display-3 aby text był duży -->
+                <p class="display-3 orange-color">Nasz Zespół</p>
+                <hr class="w-75 mx-auto mt-4 mb-5">
+                <p class="my-5">Krótki tekst o zespole a nastepnie zdjęcia zespolu z krótkimi opisami. Ipsum vero quis
+                    quibusdam iste sunt eaque modi ratione quas perferendis fugit deserunt aliquid commodi totam facere
+                    llo?</p>
+                <!-- całość kart  skopiowana z Bootstrapa z components/card/grid cards,tam ały kod do pobrania a nastepnie zmianiamy teksty ipodlinkowujemy zdjęcia,   -->
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mb-4">
+                        <div class="card">
+                            <!-- zdjęcia ze strony  pixabay.com-->
+                            <img src="img/team1.jpg" class="card-img-top" alt="Prezes">
+                            <div class="card-body">
+                                <h3 class="card-title">Prezes</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <!-- ponizej diva card-body storzyliśmy diva class card-footer z klasą row, justofy-content- around aby miejsce między ikonami socialmediów było automatycznie generowane i równe tj. aby one się automatycznie po równo dzieliły przestrzenią a nie były np. wyrównane do prawej krawedzi oraz margin na X równy 0 aby automatyczny margin nie wylewał sie w prawo i w lewo i padding na Y równy 3 aby footer carty trochę podrósł. Ogólnie cały div cadr składa sie  z trzech elementów: img, div card-body, div card-footer. Natomiast div card jest w div col ( jedna kolumna po całosci w dół )   z marginesem bottom 4 a kolumna ta jest osadzona w div row zaś on w ogólnym kontenerze tj. div container a on w section id team. -->
+                            <div class="card-footer row justify-content-around mx-0 py-3">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="img/team2.jpg" class="card-img-top" alt="Marketing">
+                            <div class="card-body">
+                                <h3 class="card-title">Marketing</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer row justify-content-around mx-0 py-3">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="img/team3.jpg" class="card-img-top" alt="Grafiki">
+                            <div class="card-body">
+                                <h3 class="card-title">Grafik</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer row justify-content-around mx-0 py-3">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="img/team4.jpg" class="card-img-top" alt="Operator kamery">
+                            <div class="card-body">
+                                <h3 class="card-title">Operator kamery</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer row justify-content-around mx-0 py-3">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="scroll-fix bg-dark text-light">
+            <div class="container text-center py-5">
+                <p class="display-3 mb-lg-5">Napisz do nas!</p>
+                <!-- w klasie kontener prócz napisu wspólnego jest duży row a w nim  sa dwie sekcje !!!!!! pierwsza z  class lg-3 z margin 5 i marinesem 0 dla rozmiaru lg, i  druga z class col -lg-9 i tej sekcji inputy do kontaktu  tresci emaila, adresu i imienia i nazwiska. Tam jest uzyty formularz  -->
+                <div class="row py-5">
+                    <div class="my-5 m-lg-0 col-lg-3 contact-info order-lg-1">
+                        <h3>Adres:</h3>
+                        <p>MNX Studio</p>
+                        <p>ul. Długa 0</p>
+                        <p>00-000 Kraków</p>
+                        <hr class="w-50 w-lg-75 mx-auto bg-light">
+                        <p><i class="fas fa-mobile-alt"></i> +48 000 000 000</p>
+                        <p><i class="fas fa-phone"></i> +12 000 00 00</p>
+                    </div>
+                    <div class="col-lg-9">
+                        <form>
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Imię i nazwisko">
+                            </div>
+
+                            <!-- taki w/w div input jest skopiowany jeszez dwa razy a w trzecim zestaiwe zamast inputa jest użyty text area !!!!!!! aby było elastyczne miejsce na text, ponizej tych trzech zestawów jest przycisk wyslij   -->
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-at"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Adres mailowy">
+                            </div>
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-comment-alt"></i>
+                                    </span>
+                                </div>
+                                <textarea rows="6" class="form-control" placeholder="Treść wiadomości"></textarea>
+                            </div>
+                            <input type="submit" value='Wyślij' class="btn btn-light px-5 py-3 submit-btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light border-top">
+        <!-- koniecznie text w p lub coś inneg  aby nie szedł bezpośrednio do pudełka footer !!!!!!!!!  Biał kreska oddzielająca footer od tego co wyzej to border-top, m-0 to zerowanie dolnego i górnego automatycznego z Bootstrapa marginesu  !!!!!! -->
+        <p class="text-center py-5 m-0">&copy; 2021 MXN Studio</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+
+    <script>
+        /* to jest auto zwijanie nawigacji  na małych wymiarach */
+        $(document).click(function (event) {
+            var clickover = $(event.target);
+            var _opened = $(".navbar-collapse").hasClass("show");
+            if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+                $(".navbar-toggler").click();
+            }
+        });
+    </script>
+</body>
+
+</html>

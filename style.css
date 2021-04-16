@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /*musi być kropka a nie przecinek w liczbie %, ten wymiar robi nam wartość w rzeczywistości 10px  i dlatego  u nas 1 rem będzie to 10 px, */ 
+    scroll-behavior: smooth; /* to odpowiada za płynne przejściana stronie w róznych przewijakach i innych działaniach */  
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+.hero-shadow { /* to jest klasa ogólna dodawana do róznych elementów  */ 
+    position: absolute;
+    top: 0;
+    width: 100%; /* cień będzie miał zawsze 10 % szerokości i po niżej wysokości swojego rodzica na który sobie go nałożymy */ 
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6); /* ten cień bo klasa ta to cień ma w tym miejscu 70 % nie-przeźroczystości!!!!!!!!!! */ 
+    z-index: -1; /* cien zawsze będzie z tyłu, aby nie przykryał nam naszych napisów na zdjęciu !!!!!!!! */ 
+}
+
+.orange-color {
+    color: rgb(255, 102, 0); /* dodany nasz kolor do gotowej palety bootstrapa*/ 
+}
+
+.scroll-fix::before  /* !!!!!!!specjalna klasa do tworzenia bufora, to jest  pseudo element before dzięki któremu nawigacja iie zasłania nam teksu sekcji na małym wymiarze i tą klasę musimy dodać do każdej sekcji w html !!!!!!!!*/ 
+    {
+    display: block;
+    margin-top: -3rem;
+    height: 3rem;
+    content: '';
+}
+
+/* NAWIGACJA */
+.navbar-brand { /* pogrubienie i powiększenie  napisu MNX w navigacji, można to też zrobić klasą w bootrstrapie ale tak też działa  */ 
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+nav .navbar-nav,
+nav .fa-bars { /*texty zawarte w tych clasach w nawigacji - powiększamy  wielkosć i przekształcamy w duże litery */
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    
+}
+
+
+nav .fa-bars {
+    padding: 1rem 2rem; /* góra dół 1 rem padingu a od boków po dwa remy  - co daje nam powiększenie strefy klikalnej  w małym rozmiarze  ekranu  hdyż wirtualnie rośnie nam  hamburger - ta klasa fa-bars w klasie nav to ikona hamburgera */ 
+}
+
+/* HEADER */
+header {
+    position: relative;
+    height: 60rem; /* ustalamy wysokoośc hedera ze djęciem i ponizej podajemy ścieżkę do naszego duzego zdjęcia, centrujemy jak poniżej i ustawiamy background - size na cover aby  */ 
+    background-image: url('./img/header.jpg');
+    background-position: center;
+    background-size: cover; /* pokrywa zdjęciem cały konterner gdzie jest  zdjęcie */  
+    z-index: 0; /* jest  bliżej nas na wierzchu bo w/w cień w klasie hero-shadow ma index na -1 !!!!!!! */ 
+}
+
+header .btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.header-text {
+    font-size: 2.5rem;
+}
+
+/* ABOUT US */
+
+
+
+.about-boxes h3 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-box {
+    background-color: rgb(248, 248, 248);
+}
+.about-icon {
+    font-size: 3rem;
+}
+
+#aboutus .btn-link { /* powiększenie wielkości  liter w akordeonie  */ 
+    font-size: 1.8rem;
+}
+.border {
+border-radius: 0.8rem;
+
+}
+
+/* TEAM */
+#team {
+    padding: 8rem 0; /* przez stosowanie paddingu zamiast wskazywania wysokości lub szerokości  sekcja ta jest lepiej responsywna */ 
+    background-color: rgb(235, 235, 235); /* przedtem bylo 248, 248, 248 - nie biala lecz prawie biała */ 
+}
+
+#team .card-img-top { 
+    height: 300px; /* aby zdjecia były równej wysokosci */ 
+    object-fit: cover; /* aby zdjcia była dobrych proporcji bo przy równym wzroście mogły się trochę powykrzywiać !!!!!!!!!!! */ 
+}
+
+/* KONTAKT */
+#contact h3 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+#contact .contact-info .fas {
+    margin-right: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#contact .submit-btn {
+    font-size: 1.8rem;
+}
+
+#contact .input-group-lg>.custom-select,
+#contact .input-group-lg>.form-control:not(textarea) {
+    height: calc(1.5em + 2rem + 2px);
+}
+ 
